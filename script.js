@@ -10,7 +10,7 @@ var DIRECTION = {
 var rounds = [5, 5, 3, 3, 2];
 var colors = ['#1abc9c', '#2ecc71', '#3498db', '#e74c3c', '#9b59b6'];
 
-// The ball object (The cube that bounces back and forth)
+// ball
 var Ball = {
 	new: function (incrementedSpeed) {
 		return {
@@ -25,7 +25,7 @@ var Ball = {
 	}
 };
 
-// The paddle object (The two lines that move up and down)
+// paddle 
 var Paddle = {
 	new: function (side) {
 		return {
@@ -40,8 +40,11 @@ var Paddle = {
 	}
 };
 
+// game
+
 var Game = {
 	initialize: function () {
+		// setting up the canvas
 		this.canvas = document.querySelector('canvas');
 		this.context = this.canvas.getContext('2d');
 
@@ -66,7 +69,7 @@ var Game = {
 	},
 
 	endGameMenu: function (text) {
-		// Change the canvas font size and color
+		// canvas font size and color
 		Pong.context.font = '50px Courier New';
 		Pong.context.fillStyle = this.color;
 
